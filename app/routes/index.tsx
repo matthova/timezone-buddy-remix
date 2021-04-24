@@ -3,7 +3,8 @@ import type {
   LinksFunction,
   LoaderFunction,
 } from "@remix-run/react";
-import { useRouteData } from "@remix-run/react";
+
+import { Form, useRouteData } from "@remix-run/react";
 
 import stylesUrl from "../styles/index.css";
 
@@ -25,5 +26,12 @@ export let loader: LoaderFunction = () => {
 export default function Index() {
   let data = useRouteData();
 
-  return <div>hello world</div>;
+  return (
+    <div>
+      <Form>
+        <input name="timezone" placeholder="TIMEZONE" />
+        <button type="submit">SUBMIT</button>
+      </Form>
+    </div>
+  );
 }
