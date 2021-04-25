@@ -5,7 +5,9 @@
   "scripts": {
     "clean": "rm -rf backend/build public/build",
     "build": "npm run clean && remix build2",
-    "dev": "remix run2"
+    "dev": "remix run2",
+    "dev-server": "arc sandbox",
+    "deploy": "arc deploy"
   },
   "dependencies": {
     "@architect/functions": "^3.13.3",
